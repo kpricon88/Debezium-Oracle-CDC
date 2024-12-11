@@ -1,0 +1,22 @@
+{
+  "name": "rds-source-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.oracle.OracleConnector",
+    "tasks.max": "1",
+    "database.server.name": "aws-rds-oracle",
+    "database.hostname": "database.cxo64ii6g1du.us-east-1.rds.amazonaws.com",
+    "database.port": "1521",
+    "database.user": "admin",
+    "database.password": "3v!VK2fZ<55}#%h:iWRN|$6rb|gX",
+    "database.dbname": "DATABASE",
+    "database.connection.adapter": "logminer",  
+    "database.history.kafka.bootstrap.servers": "kafka:9092",
+    "database.history.kafka.topic": "schema-changes.inventory",
+    "table.include.list": "ADMIN.CUSTOMERS, ADMIN.ORDERS",  
+
+    "transforms": "route",
+    "transforms.route.type": "org.apache.kafka.connect.transforms.RegexRouter",
+    "transforms.route.regex": "([^.]+)\\.([^.]+)\\.([^.]+)",
+    "transforms.route.replacement": "$3"
+  }
+}
