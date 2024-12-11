@@ -1,7 +1,7 @@
 # Debezium POC with Oracle 19 & Monitoring with Grafana
 
 ## Detailed Documentation
-https://medium.com/@susantamon/data-replication-cdc-from-oracle-to-postgresql-using-debezium-run-in-docker-exposed-in-grafana-fb5f8eeaf2c9
+https://medium.com/@kishore07/cdc-change-data-capture-integration-from-oracle-database-with-debezium-and-kafka-real-time-run-in-bb2e06ec496d
 
 ## Steps to perform
 
